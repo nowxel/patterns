@@ -1,22 +1,18 @@
 void main() {
-  final singleton1 = Singleton._instance;
-  final singleton2 = Singleton._instance;
-
-  print(singleton1 == singleton2);
-
+  Test test1 = Test.getTestInstance();
+  Test test2 = Test.getTestInstance();
+  print(test1 == test2);
 }
 
-class Singleton {
-  static Singleton _instance;
+class Test{
+  static Test test;
 
-  Singleton._internal();
+  Test._();
 
-  static Singleton getInstance() {
-    if (_instance == null) {
-      _instance = Singleton._internal();
+  static Test getTestInstance() {
+    if(test == null){
+      test = Test._();
     }
-
-    return _instance;
+    return test;
   }
 }
-
