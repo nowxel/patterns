@@ -1,6 +1,6 @@
 void main() {
-  final singleton1 = Singleton.getInstance();
-  final singleton2 = Singleton.getInstance();
+  final Singleton singleton1 = Singleton.getInstance();
+  final Singleton singleton2 = Singleton.getInstance();
   print(singleton1 == singleton2);
 
 }
